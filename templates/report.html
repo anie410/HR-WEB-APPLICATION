@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECT REPORTS</title>
+     <style type="text/css">
+
+         table,td,th{
+        border: 3px solid red;}
+        table{
+        border-collapse: collapse;
+        width:100%;
+        }
+        th{height: 50px;}
+        th,td{padding: 15px;}
+
+    </style>
+</head>
+<body bgcolor="#F5FFFA">
+<form action="/show_rep" method="get">
+
+</form>
+<table border="1">
+    <tr>
+        <th>Emp ID</th>
+        <th>Report</th>
+         <th>Project Title</th>
+    </tr>
+    {%if results%}
+    {%for result in results%}
+    <tr>
+        <td>{{result[0]}}</td>
+    <td>{{result[1]}}</td>
+        <td>{{result[2]}}</td>
+     </tr>
+    {%endfor%}
+    {%endif%}
+
+</table>
+
+
+</body>
+</html>
